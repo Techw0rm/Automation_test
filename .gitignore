@@ -1,6 +1,6 @@
-node_modules
-results
-screenshots
-videos
-mochawesome-report
+node_modules/
+/cypress/results/
+/cypress/screenshots
+/cypress/videos
 package-lock.json
+/mochawesome-report/
