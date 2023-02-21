@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-20T12:34:22.922Z",
+    "end": "2023-02-20T12:34:25.755Z",
+    "duration": 2833,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3f77f50a-77fa-4208-a55c-0bc03dad87c5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\contact-us.js",
+      "file": "cypress\\e2e\\webdriver-uni\\contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7b7db6d-ab06-4674-9064-67782d180436",
+          "title": "Test Contact Us form via WebdriveUni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to submit a successful submission via contact us form",
+              "fullTitle": "Test Contact Us form via WebdriveUni Should be able to submit a successful submission via contact us form",
+              "timedOut": null,
+              "duration": 1751,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.url().should('contain', 'contactus');\ncy.title().should('include', 'WebDriver | Contact Us');\n// cy.document().should('have.property', 'charset').and('eq','UTF-8');\ncy.document().should('have.property', 'charset', 'UTF-8');\ncontact_Us_PO.contactForm_Submission(Cypress.env('first_name'), data.last_name, data.email, 'LALALALALA', 'h1', 'Thank You for your Message!');\n//cy.webdriverUni_ContactForm_Submission(data.first_name,data.last_name,data.email,'LALALALALA','h1','Thank You for your Message!')\n// cy.get('[name=\"first_name\"]').should('be.visible').type(data.first_name);\n// cy.get('[name=\"last_name\"]').should('be.visible').type(data.last_name);\n// cy.get('[name=\"email\"]').should('be.visible').type(data.email, {delay: 0});\n// cy.get('[placeholder=\"Comments\"]').should('be.visible').type('Lalalala')\n//\n// cy.get('[type=\"submit\"]').should('be.visible').click();\n// // cy.contains('Thank You for your Message!').should('be.visible');\n// // cy.xpath('//div[h1]').should('contain.text','Thank You for your Message!')\n// cy.get('h1').should('have.text', 'Thank You for your Message!')",
+              "err": {},
+              "uuid": "b688c732-c941-4627-9a3b-7d83859ef46d",
+              "parentUUID": "f7b7db6d-ab06-4674-9064-67782d180436",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not be able to submit a successful submission via contact us form as all fields are required",
+              "fullTitle": "Test Contact Us form via WebdriveUni Should not be able to submit a successful submission via contact us form as all fields are required",
+              "timedOut": null,
+              "duration": 1074,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "contact_Us_PO.contactForm_Submission(data.first_name, data.last_name, ' ', 'LALALALALA', 'body', 'Error: Invalid email address');\n//cy.webdriverUni_ContactForm_Submission(data.first_name,data.last_name,' ','LALALALALA','body','Error: Invalid email address')\n// cy.get('[name=\"first_name\"]').should('be.visible').type(data.first_name);\n// cy.get('[type=\"submit\"]').should('be.visible').click();\n// cy.get('body').contains('Error: all fields are required');\n// //cy.xpath('//body[br]').should('contain', 'Error: all fields are required');",
+              "err": {},
+              "uuid": "c32a5e8a-e628-4359-9eb6-c2364bab5423",
+              "parentUUID": "f7b7db6d-ab06-4674-9064-67782d180436",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b688c732-c941-4627-9a3b-7d83859ef46d",
+            "c32a5e8a-e628-4359-9eb6-c2364bab5423"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2825,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-20T10:47:21.481Z",
+    "end": "2023-02-20T10:47:23.258Z",
+    "duration": 1777,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9c3db89d-5e74-4cb2-9100-d3628d3662f2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\mouse-actions.js",
+      "file": "cypress\\e2e\\webdriver-uni\\mouse-actions.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b13498df-b667-413f-b3e8-ddcc79cd1d7e",
+          "title": "Test mouse actions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "I should be able to perform a double mouse click",
+              "fullTitle": "Test mouse actions I should be able to perform a double mouse click",
+              "timedOut": null,
+              "duration": 1024,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('www.webdriveruniversity.com');\ncy.get('#actions').scrollIntoView().should('be.visible').invoke('removeAttr', 'target').click({\n  force: true\n});\n// cy.get('#double-click').dblclick().then( elem => {\n//     cy.wrap(elem).should(\"class\",'div-double-click double')\n//})\ncy.get('#double-click').dblclick().should('have.attr', 'class', 'div-double-click double');\n// cy.get('#double-click').dblclick().then((element) => {\n//     expect(element).to.have.css('background-color', 'rgb(147, 203, 90)')\n// });",
+              "err": {},
+              "uuid": "db8089ff-6ef2-41fe-b976-29a19192682a",
+              "parentUUID": "b13498df-b667-413f-b3e8-ddcc79cd1d7e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db8089ff-6ef2-41fe-b976-29a19192682a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1024,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

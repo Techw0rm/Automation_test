@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-20T12:24:20.296Z",
+    "end": "2023-02-20T12:24:23.773Z",
+    "duration": 3477,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0f53ef95-4a24-471d-b9b0-d82b2af43537",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\Datepicker.js",
+      "file": "cypress\\e2e\\webdriver-uni\\Datepicker.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6edc69e3-8186-420d-ab85-26bdb96cb5cc",
+          "title": "Test Datepicker via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Select date from the datepicker",
+              "fullTitle": "Test Datepicker via webdriveruni Select date from the datepicker",
+              "timedOut": null,
+              "duration": 2702,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('www.webdriveruniversity.com');\ncy.get('#datepicker').should('be.visible').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('#datepicker').click();\n// let dates = new Date();\n// dates.setDate(dates.getDate()) //get current day\n// cy.log(dates.getDate())\n//\n// let date = new Date();\n// date.setDate(date.getDate() + 5)\n// cy.log(date.getDate())\nvar date = new Date();\ndate.setDate(date.getDate() + 444);\nvar futureYear = date.getFullYear();\nvar futureMonth = date.toLocaleString(\"default\", {\n  month: \"long\"\n});\nvar futureDay = date.getDate();\ncy.log(\"futureYear = \" + futureYear);\ncy.log(\"futureMonth = \" + futureMonth);\ncy.log(\"futureDay = \" + futureDay);\nfunction selectMonthAndYear() {\n  cy.get('.datepicker-dropdown').find('.datepicker-switch').first().then(currentDate => {\n    if (!currentDate.text().includes(futureYear)) {\n      cy.get('.next').first().click();\n      selectMonthAndYear();\n    }\n  }).then(() => {\n    cy.get('.datepicker-dropdown').find('.datepicker-switch').first().then(currentDate => {\n      if (!currentDate.text().includes(futureMonth)) {\n        cy.get('.next').first().click();\n        selectMonthAndYear();\n      }\n    });\n  });\n}\nfunction selectFutureDay() {\n  cy.get('[class=\"day\"]').contains(futureDay).click();\n}\nselectMonthAndYear();\nselectFutureDay();",
+              "err": {},
+              "uuid": "92db1a4b-3528-4a72-ba14-3ffe68773661",
+              "parentUUID": "6edc69e3-8186-420d-ab85-26bdb96cb5cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92db1a4b-3528-4a72-ba14-3ffe68773661"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2702,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
