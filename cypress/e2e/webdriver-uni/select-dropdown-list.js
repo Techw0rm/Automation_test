@@ -1,7 +1,7 @@
 
 
 describe('Interact with dropdown lists via webdriveruni', () => {
-    it('Select specific values via select dropdown lists', () => {
+    it('Select specific values via select dropdown lists am facut modificare', () => {
 
         cy.visit('www.webdriveruniversity.com')
         cy.get('#dropdown-checkboxes-radiobuttons').should('be.visible').invoke('removeAttr','target').click({force:true});
@@ -15,3 +15,4 @@ describe('Interact with dropdown lists via webdriveruni', () => {
     });
 
 });
+
