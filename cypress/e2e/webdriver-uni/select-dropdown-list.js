@@ -15,4 +15,3 @@ describe('Interact with dropdown lists via webdriveruni', () => {
     });
 
 });
-
