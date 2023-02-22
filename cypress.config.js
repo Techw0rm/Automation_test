@@ -15,7 +15,7 @@ function getConfigurationByFile(file) {
 
 
 module.exports = defineConfig({
-  projectId: 'cohiqk',
+  projectId: 'c72yu8',
 
   e2e: {
     setupNodeEvents(on, config) {
