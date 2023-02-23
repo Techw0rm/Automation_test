@@ -18,8 +18,6 @@ pipeline {
                         bat 'npm run triggerAllTests-autoTestStore-dashboard'
                     }
                }
-
-
                stage('Slave Node2') {
                     agent {
                        label "remote_node2"
