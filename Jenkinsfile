@@ -14,7 +14,7 @@ pipeline {
                     steps {
                         git url: 'https://github.com/Techw0rm/Automation_test.git'
                         bat 'npm install'
-                        bat 'nom update'
+                        bat 'npm update'
                         bat 'npm run triggerAllTests-autoTestStore-dashboard'
                     }
                }
@@ -27,7 +27,7 @@ pipeline {
                     steps {
                         git url: 'https://github.com/Techw0rm/Automation_test.git'
                         bat 'npm install'
-                        bat 'nom update'
+                        bat 'npm update'
                         bat 'npm run triggerAllTests-autoTestStore-dashboard'
                     }
                }
